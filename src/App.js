@@ -1,41 +1,27 @@
 import React from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Navbar from './NavbarComponent'
 import Navitem from './NavitemComponent'
 import DropDownMenu from './DropDownMenuComponent'
+import {DropDownList} from './DropDownMenuComponent/DropDownList'
 import {ReactComponent as ArrowIcon} from './icons/arrow.svg'
 import {ReactComponent as CogIcon} from './icons/cog.svg'
 import {ReactComponent as CaretIcon} from './icons/caret.svg'
 import './App.css';
 
 function App() {
-
-  const menuItems = [
-    {
-      name: "Settings",
-      icon: <CogIcon/>,
-      link: "/settings"
-    },
-    {
-      name: "Settings2",
-      icon: <CogIcon/>,
-      link: "/settings2"
-    },
-    {
-      name: "Settings3",
-      icon: <CogIcon/>,
-      link: "/settings3"
-    }
-  ]
-
   return (
-    <div>
+    <>
+    <Router>
       <Navbar>
         <Navitem icon={<CogIcon/>}/>
         <Navitem icon={<CaretIcon/>}>
-          <DropDownMenu DropDownItems={menuItems}/>
+          <DropDownMenu DropDownItems={DropDownList}/>
         </Navitem>
       </Navbar>
-    </div>
+
+    </Router>
+    </>
   );
 }
 

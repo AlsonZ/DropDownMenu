@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import DropDownItem from '../DropDownItemComponent'
 import './style.css';
 
 const DropDownMenu = (props) => {
 
-  const [open, setOpen] = useState(false);
+  const loadDropDownItems = () => {
+    return(
+      props.DropDownItems.map((data) => 
+        <DropDownItem data={data}/>
+      )
+    )
+  }
 
   return(
-    <div>
-      
+    <div className="dropdownmenu">
+      {loadDropDownItems()}
     </div>
   )
 }

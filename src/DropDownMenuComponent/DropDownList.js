@@ -2,6 +2,12 @@ import React from 'react'
 import {ReactComponent as CogIcon} from '../icons/cog.svg'
 import {ReactComponent as ChevronIcon} from '../icons/chevron.svg'
 import {ReactComponent as ArrowIcon} from '../icons/arrow.svg'
+import {ReactComponent as UserIcon} from '../icons/user.svg'
+import {ReactComponent as ExitIcon} from '../icons/exit.svg'
+import {ReactComponent as StarIcon} from '../icons/star.svg'
+import {ReactComponent as BellIcon} from '../icons/bell.svg'
+import {ReactComponent as MoonIcon} from '../icons/moon.svg'
+import {ReactComponent as SunIcon} from '../icons/sun.svg'
 
 const mainList = [
   {
@@ -15,42 +21,50 @@ const mainList = [
   {
     type: "link",
     name: "Profile",
-    icon: <CogIcon/>,
+    icon: <UserIcon/>,
     link: "/profile"
   },
   {
     type: "action",
     name: "Logout",
-    icon: <CogIcon/>,
+    icon: <ExitIcon/>,
     link: "#",
     action: () => {}
   },
 ]
 const settingsList = [
   {
+    type: "action",
+    name: "Back",
+    icon: <ArrowIcon/>,
+    link: "#",
+    action: "close-side-menu"
+  },
+  {
     type: "link",
-    name: "cat",
-    icon: <CogIcon/>,
+    name: "Favourites",
+    icon: <StarIcon/>,
     link: "/cat"
   },
   {
     type: "link",
-    name: "dog",
-    icon: <CogIcon/>,
-    link: "/dog"
-  },
-  {
-    type: "link",
-    name: "pig",
-    icon: <CogIcon/>,
-    link: "/pig"
+    name: "Notifications",
+    icon: <BellIcon/>,
+    link: "/notifications"
   },
   {
     type: "action",
-    name: "return",
-    icon: <ArrowIcon/>,
+    name: "Night Mode",
+    icon: <MoonIcon/>,
     link: "#",
-    action: "close-side-menu"
+    action: "toggle-nightmode"
+  },
+  {
+    type: "action",
+    name: "Light Mode",
+    icon: <SunIcon/>,
+    link: "#",
+    action: "toggle-lightmode"
   },
 ]
 

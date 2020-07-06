@@ -18,14 +18,26 @@ function App() {
           <DropDownMenu DropDownList={DropDownList}/>
         </Navitem>
       </Navbar>
+      <Route exact path="/profile" component={profile}/>
       <Route exact path="/cat" component={cat}/>
+      <Route exact path="/dog" component={dog}/>
+      <Route exact path="/pig" component={pig}/>
     </Router>
     </>
   );
 }
 
+const profile = () => {
+  return(<div>profile page</div>)
+}
 const cat = () => {
   return(<div>cat page</div>)
+}
+const dog = () => {
+  return(<div>dog page</div>)
+}
+const pig = () => {
+  return(<div>pig page</div>)
 }
 
 export default App;

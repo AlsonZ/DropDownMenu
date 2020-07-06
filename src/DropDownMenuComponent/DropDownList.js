@@ -1,13 +1,16 @@
 import React from 'react'
 import {ReactComponent as CogIcon} from '../icons/cog.svg'
-export const DropDownList = [
+import {ReactComponent as ChevronIcon} from '../icons/chevron.svg'
+import {ReactComponent as ArrowIcon} from '../icons/arrow.svg'
+
+const mainList = [
   {
     type: "action",
     name: "Settings",
     icon: <CogIcon/>,
-    iconRight: <CogIcon/>,
+    iconRight: <ChevronIcon/>,
     link: "#",
-    action: () => {}
+    action: 'open-side-menu'
   },
   {
     type: "link",
@@ -22,23 +25,36 @@ export const DropDownList = [
     link: "#",
     action: () => {}
   },
+]
+const settingsList = [
   {
-    type: "side-menu",
+    type: "link",
     name: "cat",
     icon: <CogIcon/>,
     link: "/cat"
   },
   {
-    type: "side-menu",
+    type: "link",
     name: "dog",
     icon: <CogIcon/>,
     link: "/dog"
   },
   {
-    type: "side-menu-action",
-    name: "return",
+    type: "link",
+    name: "pig",
     icon: <CogIcon/>,
+    link: "/pig"
+  },
+  {
+    type: "action",
+    name: "return",
+    icon: <ArrowIcon/>,
     link: "#",
-    action: () => {}
+    action: "close-side-menu"
   },
 ]
+
+export const DropDownList = {
+  main: mainList,
+  settings: settingsList,
+}

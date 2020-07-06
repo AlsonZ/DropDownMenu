@@ -7,6 +7,49 @@
   border: var(--border);
   border-radius: var(--border-radius);
   padding: 1rem;
-  
   overflow: hidden;
+  height: 500px;
+}
+.menu {
+  width: 100%;
+}
+/*Main Menu*/
+.main-menu-enter {
+  position: absolute; 
+  transform: translateX(-110%);
+}
+.main-menu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.main-menu-exit {
+  position: absolute;
+}
+.main-menu-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+/*Side Menu*/
+.side-menu-enter {
+  position: absolute; 
+  transform: translateX(110%);
+}
+.side-menu-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.side-menu-exit {
+  position: absolute;
+}
+.side-menu-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .dropdownmenu {
+    transform: translate(-40%);
+    max-width: 80%;
+  }
 }

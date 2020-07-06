@@ -4,7 +4,6 @@ import Navbar from './NavbarComponent'
 import Navitem from './NavitemComponent'
 import DropDownMenu from './DropDownMenuComponent'
 import {DropDownList} from './DropDownMenuComponent/DropDownList'
-import {ReactComponent as ArrowIcon} from './icons/arrow.svg'
 import {ReactComponent as CogIcon} from './icons/cog.svg'
 import {ReactComponent as CaretIcon} from './icons/caret.svg'
 import './App.css';
@@ -16,13 +15,17 @@ function App() {
       <Navbar>
         <Navitem icon={<CogIcon/>}/>
         <Navitem icon={<CaretIcon/>}>
-          <DropDownMenu DropDownItems={DropDownList}/>
+          <DropDownMenu DropDownList={DropDownList}/>
         </Navitem>
       </Navbar>
-
+      <Route exact path="/cat" component={cat}/>
     </Router>
     </>
   );
+}
+
+const cat = () => {
+  return(<div>cat page</div>)
 }
 
 export default App;

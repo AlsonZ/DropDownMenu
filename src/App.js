@@ -19,9 +19,8 @@ function App() {
         </Navitem>
       </Navbar>
       <Route exact path="/profile" component={profile}/>
-      <Route exact path="/cat" component={cat}/>
-      <Route exact path="/dog" component={dog}/>
-      <Route exact path="/pig" component={pig}/>
+      <Route exact path="/favourites" component={favourties}/>
+      <Route exact path="/notifications" component={notifications}/>
     </Router>
     </>
   );

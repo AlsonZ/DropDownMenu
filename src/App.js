@@ -19,7 +19,7 @@ function App() {
         </Navitem>
       </Navbar>
       <Route exact path="/profile" component={profile}/>
-      <Route exact path="/favourites" component={favourties}/>
+      <Route exact path="/favourites" component={favourites}/>
       <Route exact path="/notifications" component={notifications}/>
     </Router>
     </>

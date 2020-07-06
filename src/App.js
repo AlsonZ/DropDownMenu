@@ -30,14 +30,12 @@ function App() {
 const profile = () => {
   return(<div>profile page</div>)
 }
-const cat = () => {
-  return(<div>cat page</div>)
+const favourites = () => {
+  return(<div>favourites page</div>)
 }
-const dog = () => {
-  return(<div>dog page</div>)
+const notifications = () => {
+  return(<div>notifications page</div>)
 }
-const pig = () => {
-  return(<div>pig page</div>)
-}
+
 
 export default App;

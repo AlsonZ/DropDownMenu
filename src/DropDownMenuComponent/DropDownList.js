@@ -44,7 +44,7 @@ const settingsList = [
     type: "link",
     name: "Favourites",
     icon: <StarIcon/>,
-    link: "/cat"
+    link: "/favourites"
   },
   {
     type: "link",

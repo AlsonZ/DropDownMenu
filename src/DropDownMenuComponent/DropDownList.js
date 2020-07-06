@@ -37,7 +37,7 @@ const settingsList = [
     type: "action",
     name: "Back",
     icon: <ArrowIcon/>,
-    link: "#",
+    link: "",
     action: "close-side-menu"
   },
   {
@@ -56,14 +56,14 @@ const settingsList = [
     type: "action",
     name: "Night Mode",
     icon: <MoonIcon/>,
-    link: "#",
+    link: "",
     action: "toggle-nightmode"
   },
   {
     type: "action",
     name: "Light Mode",
     icon: <SunIcon/>,
-    link: "#",
+    link: "",
     action: "toggle-lightmode"
   },
 ]

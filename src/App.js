@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route } from 'react-router-dom'
+import {HashRouter, Route } from 'react-router-dom'
 import Navbar from './NavbarComponent'
 import Navitem from './NavitemComponent'
 import DropDownMenu from './DropDownMenuComponent'
@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <>
-    <Router>
+    <HashRouter basename="/">
       <Navbar>
         <Navitem link="/profile" icon={<UserIcon/>}/>
         <Navitem icon={<CaretIcon/>}>
@@ -21,7 +21,7 @@ function App() {
       <Route exact path="/profile" component={profile}/>
       <Route exact path="/favourites" component={favourites}/>
       <Route exact path="/notifications" component={notifications}/>
-    </Router>
+    </HashRouter>
     </>
   );
 }

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const Navitem = (props) => {
-
+  //possibly turn into context
   const [open, setOpen] = useState(false);
 
   return(
     <li className="navitem">
-      <a href="#" className="icon-button" onClick={() => {setOpen(!open)}}>
+      <Link to={props.link} className="icon-button" onClick={() => {setOpen(!open)}}>
         {props.icon}
-      </a>
-
+      </Link>
       {open && props.children}
     </li>
   )

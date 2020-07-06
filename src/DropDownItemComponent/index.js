@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
@@ -27,12 +28,12 @@ const DropDownItem = (props) => {
       )
     case "link":
       return(
-      <a href={link} className="menu-item">
-      <span className="icon-button">{icon}</span>
-      {name}
-      <span className="icon-right">{props.data.iconRight}</span>
-    </a>
-    ) 
+      <Link to={link} className="menu-item">
+        <span className="icon-button">{icon}</span>
+        {name}
+        <span className="icon-right">{props.data.iconRight}</span>
+      </Link>
+      ) 
     default:
       return(
         <></>

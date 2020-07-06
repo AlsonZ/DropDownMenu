@@ -17,6 +17,8 @@
   align-items: center;
   justify-content: center;
   transition: filter 300ms;
+  color: var(--text-colour);
+  cursor: pointer;
 }
 
 .icon-button:hover {

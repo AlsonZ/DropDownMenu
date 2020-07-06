@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route } from 'react-router-dom'
 import Navbar from './NavbarComponent'
 import Navitem from './NavitemComponent'
 import DropDownMenu from './DropDownMenuComponent'
@@ -13,7 +13,7 @@ function App() {
     <>
     <Router>
       <Navbar>
-        <Navitem icon={<UserIcon/>}/>
+        <Navitem link="/profile" icon={<UserIcon/>}/>
         <Navitem icon={<CaretIcon/>}>
           <DropDownMenu DropDownList={DropDownList}/>
         </Navitem>
